@@ -6,24 +6,24 @@ import { Section } from '../Section/Section';
 import { Notification } from '../Notification/Notification';
 
 export const App = () => {
-  const [good, setGoodFeedback] = useState(0);
-  const [neutral, setNeutralFeedback] = useState(0);
-  const [bad, setBadFeedback] = useState(0);
+  const [good, setGood] = useState(0);
+  const [neutral, setNeutral] = useState(0);
+  const [bad, setBad] = useState(0);
 
   const feedbackOptions = { good, neutral, bad };
 
   const handleFeedbackChange = option => {
     switch (option) {
       case 'good':
-        setGoodFeedback(value => value + 1);
+        setGood(value => value + 1);
         break;
 
       case 'neutral':
-        setNeutralFeedback(value => value + 1);
+        setNeutral(value => value + 1);
         break;
 
       case 'bad':
-        setBadFeedback(value => value + 1);
+        setBad(value => value + 1);
         break;
 
       default:
